@@ -1,3 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Yomogi&display=swap");
+
+* {
+  font-family: "Yomogi", cursive;
+}
+
+.body {
+  padding: 100vh;
+}
+
 .hidden {
-  display:none;
+  display: none;
+}
+
+.weather {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.clock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock__span {
+  font-size: 150px;
+  padding: 150px 250px 0px 250px;
+}
+
+.todolist {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todolist__input {
+  border-style: none none solid none;
+  background: transparent;
+  width: 700px;
+  height: 50px;
+  font-size: large;
+  font-display: center;
+  text-align: center;
+}
+
+.username__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.username__input {
+  border-style: none none solid none;
+  background: transparent;
+  width: 180px;
+  height: 50px;
+  font-size: 40px;
+  text-align: center;
+}
+
+.username__label {
+  font-size: 40px;
+}
+
+.todolist_list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.lint-through {
+  text-decoration-line: line-through;
 }

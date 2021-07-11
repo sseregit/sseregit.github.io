@@ -1,24 +1,30 @@
-const loginform = document.body.querySelector(".username__form");
-const loginform_username = document.body.querySelector(".username__input");
-const hello = document.body.querySelector(".username__label");
+const username_form = document.body.querySelector(".username__form");
+const username_input = document.body.querySelector(".username__input");
+const username_label = document.body.querySelector(".username__label");
+const todolist__input = document.querySelector(".todolist__input");
+
+const USERNAMECHK = "username";
 
 function getusername(e) {
   e.preventDefault();
-  const username = loginform_username.value;    
-  localStorage.setItem("username",username);
+  const username = username_input.value;
+  localStorage.setItem(USERNAMECHK, username);
   setName(username);
 }
 
-function setName(username){
-  if (username !== null){    
-    hello.innerText = `Hello ${username}`;    
-    loginform.classList.toggle("hidden");
-    hello.classList.toggle("hidden"); 
+function setName(username) {
+  if (username !== null) {
+    username_label.innerText = `Hello ${username}`;
+    username_input.classList.toggle("hidden");
+    todolist__input.classList.toggle("hidden");
   }
 }
 
-const savename = localStorage.getItem("username");
+const savename = localStorage.getItem(USERNAMECHK);
 
-setName(savename);
-
-loginform.addEventListener("submit",getusername)
+if (savename !== null) {
+  setName(savename);
+} else {
+  localStorage.clear();
+}
+username_form.addEventListener("submit", getusername);

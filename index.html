@@ -1,28 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <div class="weather">
-  <span class="weather__span"></span>
-  </div>
-  <div class="clock">
-    <span class="clock__span"></span>    
-  </div>
-  <div class="username">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="weather">
+      <span class="weather__span"></span>
+    </div>
+    <div class="clock">
+      <span class="clock__span"></span>
+    </div>
     <form class="username__form">
-      <input type="text" class="username__input" placeholder="Login ID" required />
-      <input type="submit" value="log in">
+      <label class="username__label">Please log in.</label>
+      <input
+        type="text"
+        class="username__input"
+        placeholder="Login ID"
+        required
+      />
     </form>
-    <label class="username__label hidden"></label> 
-  </div>
-  <script src="js/clock.js"></script>
-  <script src="js/username.js"></script>
-  <script src="js/weather.js"></script>
-<script src="js/todolist.js"></script>
-</body>
+    <div>
+      <form class="todolist">
+        <input
+          type="text"
+          class="todolist__input hidden"
+          placeholder="Write a To Do and Press Enter"
+        />
+      </form>
+      <ul class="todolist_list"></ul>
+    </div>
+    <script src="js/clock.js"></script>
+    <script src="js/username.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/todolist.js"></script>
+  </body>
 </html>
