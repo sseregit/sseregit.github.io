@@ -24,7 +24,7 @@ jobs:
           corepack enable
           pnpm install
           pnpm approve-builds
-          pnpm quartz build -d public   # 산출물 public 폴더로 빌드
+          pnpm quartz build   # 산출물 public 폴더로 빌드
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
